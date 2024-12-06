@@ -1,0 +1,19 @@
+{ 
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+    },
+     "target": "esnext",  // Esto especifica el tipo de salida
+    "module": "esnext",  // Para módulos ES
+    "strict": true,
+    "jsx": "react-jsx",  // Especifica que usas JSX
+    "moduleResolution": "node",  // Resuelve módulos como Node.js
+    "esModuleInterop": true, // Para compatibilidad con módulos
+    "allowJs": false,  // Asegúrate de que no se permita la conversión de archivos .js
+    "outDir": "./dist",  // Asegúrate de que los archivos .js solo se generen en la carpeta de salida
+    "rootDir": "./src"  // Asegúrate de que el código fuente esté en src
+  },
+  "include": ["src", "vite-env.d.ts"],
+  "exclude": ["node_modules", "dist"]  // Excluir node_modules y la carpeta de salida
+}

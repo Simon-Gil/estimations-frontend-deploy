@@ -1,0 +1,75 @@
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0rem;
+  text-align: center;
+}
+
+
+/* Aplica estilos globales para todas las barras de desplazamiento */
+* {
+  /* Para los navegadores basados en WebKit (Chrome, Safari, Edge, etc.) */
+  /* El grosor de la barra de desplazamiento */
+  ::-webkit-scrollbar {
+    width: 0px; /* Grosor de la barra vertical */
+    height: 0px; /* Grosor de la barra horizontal */
+  }
+
+  /* El fondo de la pista (el área donde se mueve la barra) */
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Sin fondo visible */
+  }
+
+  /* La parte que se mueve (el "pulgar") */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255); /* Color de la barra */
+    border-radius: 3px; /* Redondear los bordes de la barra */
+  }
+
+  /* Para Firefox */
+  scrollbar-width: thin; /* Grosor de la b arra */
+  scrollbar-color: rgba(255, 255, 255, 0)transparent; /* Color de la barra y fondo transparente */
+}
+
+
+/* Mostrar el ícono solo en hover */
+td .hoverIcon {
+  opacity: 0;
+}
+
+/* Ocultar el texto y mostrar el icono en hover */
+td.hover .hoverIcon {
+  opacity: 1;
+}
+
+td.hover .cellText {
+  opacity: 0; /* Oculta el texto al hacer hover */
+}
+
+
+
+
+.MuiTableCell-root{
+  background-color: #ffffff !important;
+}
+
+.MuiTableCell-root .MuiPaper-root {
+  box-shadow: none !important;
+}
+
+
+.MuiTableRow-root td::after {
+  display: none !important;
+  content: none !important;
+}
+
+
+.estimation-table::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.estimation-table {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
